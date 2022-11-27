@@ -84,27 +84,15 @@ public class ChessBoard {
     private void addPieces(){
         for(Square square : squares){
             if(square.occupied) continue;
-            if(square.y == 1){
-                addPiece(square, new Pawn("black", square.x, square.y));
-            }
-            else if(square.y == 6){
-                addPiece(square, new Pawn("white", square.x, square.y));
-            }
-            else if(square.y == 0){
+ if(square.y == 0){
                 if(square.x == 4){
                     addPiece(square, new King("black", square.x, square.y));
                 }
                 if(square.x == 3){
                     addPiece(square, new Queen("black", square.x, square.y));
                 }
-                if(square.x == 2 || square.x == 5){
-                    addPiece(square, new Bishop("black", square.x, square.y));
-                }
                 if(square.x == 1 || square.x == 6){
                     addPiece(square, new Knight("black", square.x, square.y));
-                }
-                if(square.x == 0 || square.x == 7){
-                    addPiece(square, new Rook("black", square.x, square.y));
                 }
             }
             else if(square.y == 7){
@@ -114,15 +102,11 @@ public class ChessBoard {
                 if(square.x == 3){
                     addPiece(square, new Queen("white", square.x, square.y));
                 }
-                if(square.x == 2 || square.x == 5){
-                    addPiece(square, new Bishop("white", square.x, square.y));
-                }
+
                 if(square.x == 1 || square.x == 6){
                     addPiece(square, new Knight("white", square.x, square.y));
                 }
-                if(square.x == 0 || square.x == 7){
-                    addPiece(square, new Rook("white", square.x, square.y));
-                }
+
             }
 
 
