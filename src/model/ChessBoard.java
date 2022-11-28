@@ -1,4 +1,4 @@
-package sample;
+package sample.src.model;
 
 import javafx.geometry.Insets;
 import javafx.scene.layout.*;
@@ -10,7 +10,7 @@ public class ChessBoard {
 
     GridPane chessBoard;
     String theme;
-    public ArrayList<Square> squares = new ArrayList<>();
+    public ArrayList<Game.Square> squares = new ArrayList<>();
 
     public ChessBoard(GridPane chessBoard, String theme){
         this.chessBoard = chessBoard;
@@ -23,7 +23,7 @@ public class ChessBoard {
     private void makeBoard(GridPane chessBoard, String theme){
         for(int i=0; i<8; i++){
             for(int j=0; j<8; j++){
-                Square square = new Square(i,j);
+                Game.Square square = new Game.Square(i,j);
                 square.setName("Square" + i + j);
                 square.setPrefHeight(100);
                 square.setPrefWidth(100);
@@ -37,7 +37,7 @@ public class ChessBoard {
         addPieces();
     }
 
-    private void setTheme(Square square, String theme, int i, int j){
+    private void setTheme(Game.Square square, String theme, int i, int j){
         Color color1 = Color.web("#ffffff00");
         Color color2 = Color.web("#ffffff00");
 
@@ -76,13 +76,13 @@ public class ChessBoard {
 
     }
 
-    private void addPiece(Square square, Piece piece){
+    private void addPiece(Game.Square square, Piece piece){
         square.getChildren().add(piece);
         square.occupied = true;
     }
 
     private void addPieces(){
-        for(Square square : squares){
+        for(Game.Square square : squares){
             if(square.occupied) continue;
  if(square.y == 0){
                 if(square.x == 4){

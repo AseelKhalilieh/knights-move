@@ -1,10 +1,11 @@
-package sample;
+package sample.src.model;
 
 import javafx.event.EventHandler;
 import javafx.event.EventTarget;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 
 public class Game {
@@ -146,4 +147,31 @@ public class Game {
     }
 
 
+    public static class Square extends StackPane {
+
+        int x,y;
+        boolean occupied;
+        String name;
+
+        public Square(int x, int y){
+            this.x = x;
+            this.y = y;
+            this.occupied = false;
+        }
+
+        @Override
+        public String toString() {
+            String status;
+            if(this.occupied) status = "Occupied";
+            else status = "Not occupied";
+    //        return "Square" + this.x + this.y + " - " + status;
+            return "Square";
+        }
+
+        public void setName(String name){
+            this.name = name;
+        }
+
+
+    }
 }

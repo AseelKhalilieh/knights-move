@@ -1,4 +1,7 @@
-package sample;
+package sample.src.model;
+
+import sample.src.model.Game;
+import sample.src.model.Piece;
 
 import java.util.ArrayList;
 

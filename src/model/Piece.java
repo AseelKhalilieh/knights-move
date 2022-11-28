@@ -1,4 +1,4 @@
-package sample;
+package sample.src.model;
 
 import javafx.event.EventHandler;
 import javafx.scene.effect.Glow;
@@ -54,7 +54,7 @@ public class Piece extends ImageView {
             Glow glow = new Glow();
             glow.setLevel(0.3);
             for(String move : possibleMoves){
-                Square square = getSquareByName(move);
+                Game.Square square = getSquareByName(move);
                 square.setEffect(glow);
 
                 Piece piece = getPieceByName(move);
@@ -71,7 +71,7 @@ public class Piece extends ImageView {
         }
         else{
             for(String move : possibleMoves){
-                Square square = getSquareByName(move);
+                Game.Square square = getSquareByName(move);
                 square.setEffect(null);
                 square.setBorder(new Border(new BorderStroke(Color.BLACK,
                         BorderStrokeStyle.SOLID, CornerRadii.EMPTY, BorderWidths.DEFAULT)));
@@ -79,8 +79,8 @@ public class Piece extends ImageView {
         }
     }
 
-    public Square getSquareByName(String name){
-        for(Square square : Game.cb.squares){
+    public Game.Square getSquareByName(String name){
+        for(Game.Square square : Game.cb.squares){
             if(square.name.equals(name)){
                 return square;
             }
@@ -90,7 +90,7 @@ public class Piece extends ImageView {
     }
 
     public Piece getPieceByName(String name){
-        for(Square square : Game.cb.squares){
+        for(Game.Square square : Game.cb.squares){
             if(square.getChildren().size() == 0) continue;
 
             if(square.name.equals(name))

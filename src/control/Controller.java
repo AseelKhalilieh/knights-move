@@ -1,7 +1,8 @@
-package sample;
+package sample.src.control;
 
 import javafx.fxml.FXML;
 import javafx.scene.layout.GridPane;
+import sample.src.model.Game;
 
 public class Controller {
 
