@@ -84,30 +84,22 @@ public class ChessBoard {
     private void addPieces(){
         for(Game.Square square : squares){
             if(square.occupied) continue;
- if(square.y == 0){
-                if(square.x == 4){
-                    addPiece(square, new King("black", square.x, square.y));
-                }
-                if(square.x == 3){
-                    addPiece(square, new Queen("black", square.x, square.y));
-                }
-                if(square.x == 1 || square.x == 6){
-                    addPiece(square, new Knight("black", square.x, square.y));
-                }
-            }
-            else if(square.y == 7){
-                if(square.x == 4){
-                    addPiece(square, new King("white", square.x, square.y));
-                }
-                if(square.x == 3){
-                    addPiece(square, new Queen("white", square.x, square.y));
-                }
 
-                if(square.x == 1 || square.x == 6){
-                    addPiece(square, new Knight("white", square.x, square.y));
-                }
-
+            //Draw the knight piece
+            if(square.y == 0 && square.x == 0)
+            {
+                addPiece(square, new Knight("white", square.x, square.y));
             }
+            //Draw the Queen piece
+            if(square.y == 0 && square.x == 7)
+            {
+                addPiece(square, new Queen("black", square.x, square.y));
+            }
+            //Draw the King piece
+//            if(square.y == 0 && square.x == 7)
+//            {
+//                addPiece(square, new King("black", square.x, square.y));
+//            }
 
 
         }
