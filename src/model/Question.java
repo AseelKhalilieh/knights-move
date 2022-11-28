@@ -1,5 +1,5 @@
 package sample.src.model;
 
-public class SysData {
-
+public class Question {
 }
+
