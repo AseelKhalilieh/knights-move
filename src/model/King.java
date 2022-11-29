@@ -1,6 +1,7 @@
 package sample.src.model;
 
 import java.util.ArrayList;
+import sample.src.model.Piece;
 
 public class King extends Piece {
     public King(String color, int posX, int posY) {
