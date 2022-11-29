@@ -1,4 +1,4 @@
-package src.view;
+package src.control;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -18,7 +18,8 @@ public class Launch extends Application {
         stage = primaryStage;
         try {
 
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("homepage.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/sample/src/view/homepage.fxml"));
+
             Parent root1 = (Parent) fxmlLoader.load();
             Scene scene = new Scene(root1);
             stage.setScene(scene);

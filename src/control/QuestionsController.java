@@ -35,7 +35,7 @@ public class QuestionsController {
     @FXML
     void goBack(ActionEvent event) {
         try{
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../view/login.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/sample/src/view/login.fxml"));
             Parent root = (Parent) fxmlLoader.load();
             //Switch to the game scene
             Stage stage = (Stage) backBtn.getScene().getWindow();

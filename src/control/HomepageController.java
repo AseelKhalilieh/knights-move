@@ -20,7 +20,7 @@ public class HomepageController {
     @FXML
     void openLoginPage(ActionEvent event) {
         try{
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../view/login.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/sample/src/view/login.fxml"));
             Parent root = (Parent) fxmlLoader.load();
             //Switch to the game scene
             Stage stage = (Stage) manageQuestions.getScene().getWindow();
@@ -36,7 +36,7 @@ public class HomepageController {
     @FXML
     void startGame(ActionEvent event) {
         try{
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../view/sample.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/sample/src/view/sample.fxml"));
             Parent root = (Parent) fxmlLoader.load();
             //Switch to the game scene
             Stage stage = (Stage) newGame.getScene().getWindow();

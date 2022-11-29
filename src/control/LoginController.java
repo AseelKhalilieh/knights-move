@@ -20,7 +20,7 @@ public class LoginController {
     @FXML
     void goBack(ActionEvent event) {
         try{
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../view/homepage.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/sample/src/view/homepage.fxml"));
             Parent root = (Parent) fxmlLoader.load();
             //Switch to the game scene
             Stage stage = (Stage) backBtn.getScene().getWindow();
@@ -36,7 +36,7 @@ public class LoginController {
     @FXML
     void handleLogin(ActionEvent event) {
         try{
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../view/questions.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/sample/src/view/questions.fxml"));
             Parent root = (Parent) fxmlLoader.load();
             //Switch to the game scene
             Stage stage = (Stage) loginBtn.getScene().getWindow();

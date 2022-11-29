@@ -27,7 +27,7 @@ public class Controller {
     @FXML
     void goBack(ActionEvent event) {
         try{
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../view/homepage.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/sample/src/view/homepage.fxml"));
             Parent root = (Parent) fxmlLoader.load();
             Stage stage = (Stage) backBtn.getScene().getWindow();
             stage.setTitle("Chess");
