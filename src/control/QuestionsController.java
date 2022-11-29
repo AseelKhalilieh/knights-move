@@ -1,4 +1,4 @@
-package sample.src.control;
+package src.control;
 
         import javafx.event.ActionEvent;
         import javafx.fxml.FXML;

@@ -1,11 +1,10 @@
-package sample.src.view;
+package src.view;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import sample.src.control.HomepageController;
 
 public class Launch extends Application {
     private Stage stage;
@@ -18,9 +17,10 @@ public class Launch extends Application {
     public void mainWindow (Stage primaryStage){
         stage = primaryStage;
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("homepage.fxml"));
 
-            Scene scene = new Scene(root);
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("homepage.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Scene scene = new Scene(root1);
             stage.setScene(scene);
             stage.show();
         } catch(Exception e) {
