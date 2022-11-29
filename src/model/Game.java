@@ -7,6 +7,8 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
+import sample.src.model.Piece;
+import sample.src.model.ChessBoard;
 
 public class Game {
 

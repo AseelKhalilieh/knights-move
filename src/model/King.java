@@ -2,6 +2,7 @@ package sample.src.model;
 
 import java.util.ArrayList;
 import sample.src.model.Piece;
+import sample.src.model.Game;
 
 public class King extends Piece {
     public King(String color, int posX, int posY) {

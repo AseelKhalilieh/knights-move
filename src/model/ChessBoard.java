@@ -5,6 +5,10 @@ import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 
 import java.util.ArrayList;
+import sample.src.model.Game;
+import sample.src.model.Piece;
+import sample.src.model.Knight;
+import sample.src.model.Queen;
 
 public class ChessBoard {
 

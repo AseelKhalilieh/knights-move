@@ -1,6 +1,8 @@
 package sample.src.model;
 
 import java.util.ArrayList;
+import sample.src.model.Piece;
+import sample.src.model.Game;
 
 public class Knight extends Piece {
     public Knight(String color, int posX, int posY) {

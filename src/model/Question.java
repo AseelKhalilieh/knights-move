@@ -1,8 +1,12 @@
 package sample.src.model;
 
+
+import java.util.List;
+
+
 public class Question {
   public int question ; 
-public List<String> answers ; 
+public List<String> answers ;
 public  String correct_ans; 
 public  String level; 
 public String team ;
