@@ -37,7 +37,7 @@
             <Font name="Lucida Console" size="37.0" />
          </font>
       </Text>
-      <Button alignment="CENTER" layoutX="695.0" layoutY="489.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="376.0" text="Manage Questions (ADMIN only)">
+      <Button fx:id="manageQuestions" alignment="CENTER" layoutX="695.0" layoutY="489.0" mnemonicParsing="false" onAction="#openLoginPage" prefHeight="37.0" prefWidth="376.0" text="Manage Questions (ADMIN only)">
          <font>
             <Font name="Lucida Console" size="14.0" />
          </font>

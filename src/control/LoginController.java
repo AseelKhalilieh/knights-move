@@ -1,3 +1,4 @@
+
 package sample.src.control;
 
         import javafx.event.ActionEvent;
@@ -6,36 +7,20 @@ package sample.src.control;
         import javafx.scene.Parent;
         import javafx.scene.Scene;
         import javafx.scene.control.Button;
+
         import javafx.stage.Stage;
 
-public class QuestionsController {
+public class LoginController {
 
     @FXML
     private Button backBtn;
-
     @FXML
-    private Button editQuestion;
-
-    @FXML
-    private Button deleteQuestion;
-
-    @FXML
-    private Button newQuestion;
-
-    @FXML
-    void deleteQuestion(ActionEvent event) {
-
-    }
-
-    @FXML
-    void editQuestion(ActionEvent event) {
-
-    }
+    private Button loginBtn;
 
     @FXML
     void goBack(ActionEvent event) {
         try{
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../view/login.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../view/homepage.fxml"));
             Parent root = (Parent) fxmlLoader.load();
             //Switch to the game scene
             Stage stage = (Stage) backBtn.getScene().getWindow();
@@ -49,8 +34,19 @@ public class QuestionsController {
     }
 
     @FXML
-    void newQuestion(ActionEvent event) {
+    void handleLogin(ActionEvent event) {
+        try{
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../view/questions.fxml"));
+            Parent root = (Parent) fxmlLoader.load();
+            //Switch to the game scene
+            Stage stage = (Stage) loginBtn.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Chess");
+            stage.show();
 
+        } catch (Exception e){
+            System.err.println(e.getMessage());
+        }
     }
 
 }

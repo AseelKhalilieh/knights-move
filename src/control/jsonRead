@@ -47,23 +47,26 @@ public class jsonRead {
             /*************** questions ****************/
 
           JSONArray jsonArrayquestions = (JSONArray) mainJsonObject.get("questions");
-         //  System.out.println("questions : ");
+           //System.out.println("questions : ");
            for (int i = 0; i < jsonArrayquestions.size(); i++) {
              Question Q= new Question(i + 1);
         	JSONObject jsonArrayquestion = (JSONObject) jsonArrayquestions.get(i);
             //  System.out.println("      question " + (i + 1));
-              List answers = (List) jsonArrayquestion.get("answers");
-              Q.setAnswers(answers);
-            //  System.out.println("      answers : " + answers);
+              List<String> answers =  (List) jsonArrayquestion.get("answers");
+                 for (int j = 0; j < answers.size(); j++) {
+                        Answer A= new Answer(answers.get(j));
+                        Q.getAnswers().add(A);
+                   }            
+              //System.out.println("      answers : " + answers);
               String correct_ans = (String) jsonArrayquestion.get("correct_ans");
               Q.setCorrect_ans(correct_ans);
-           //     System.out.println("      correct_ans : " + correct_ans);
+                //System.out.println("      correct_ans : " + correct_ans);
                 String team = (String) jsonArrayquestion.get("team");
                 Q.setTeam(team);
-             //  System.out.println("      team : " + team);
+              // System.out.println("      team : " + team);
                String level = (String) jsonArrayquestion.get("level");
                  Q.setLevel(level);
-           //    System.out.println("      level : " + level);
+               //System.out.println("      level : " + level);
                Questions.add(Q);
         
         }
