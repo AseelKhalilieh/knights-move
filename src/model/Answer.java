@@ -15,6 +15,9 @@ public class Answer {
         this.isCorrect = isCorrect;
     }
 
+    public Answer(String s) {
+    }
+
     // getters & setters
     public int getId() {
         return id;

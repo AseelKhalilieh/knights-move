@@ -1,9 +1,9 @@
 package sample.src.model;
 
 import java.util.ArrayList;
-import sample.src.model.Question;
 import sample.src.model.Game;
 import src.model.Player;
+import src.model.Question;
 
 public class SysData {
 
