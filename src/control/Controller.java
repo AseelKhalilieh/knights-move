@@ -29,10 +29,10 @@ public class Controller {
     void goBack(ActionEvent event) {
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../view/homepage.fxml"));
-            Parent root1 = (Parent) fxmlLoader.load();
-            Stage stage = new Stage();
+            Parent root = (Parent) fxmlLoader.load();
+            Stage stage = (Stage) backBtn.getScene().getWindow();
             stage.setTitle("Chess");
-            stage.setScene(new Scene(root1));
+            stage.setScene(new Scene(root));
             stage.show();
 
         } catch (Exception e){
