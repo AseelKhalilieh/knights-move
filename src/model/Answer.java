@@ -2,70 +2,72 @@ package src.model;
 
 public class Answer {
 
-    private int id;
-    private String content;
-    private boolean isCorrect;
+ 	private int id;
+	private String content;
+	
+	
+	
+	public Answer( String a) {
+	
+		this.content = a;
+	
+	}
 
 
 
-    public Answer(int id, String content, boolean isCorrect) {
-        super();
-        this.id = id;
-        this.content = content;
-        this.isCorrect = isCorrect;
-    }
-
-    public Answer(String s) {
-    }
-
-    // getters & setters
-    public int getId() {
-        return id;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public boolean isCorrect() {
-        return isCorrect;
-    }
-
-    @Override
-    public String toString() {
-        return "Answer:id=" + id + ", content=" + content + ", isCorrect=" + isCorrect ;
-    }
-
-    @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((content == null) ? 0 : content.hashCode());
-        result = prime * result + id;
-        result = prime * result + (isCorrect ? 1231 : 1237);
-        return result;
-    }
+	public int getId() {
+		return id;
+	}
 
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj)
-            return true;
-        if (obj == null)
-            return false;
-        if (getClass() != obj.getClass())
-            return false;
-        Answer other = (Answer) obj;
-        if (content == null) {
-            if (other.content != null)
-                return false;
-        } else if (!content.equals(other.content))
-            return false;
-        if (id != other.id)
-            return false;
-        if (isCorrect != other.isCorrect)
-            return false;
-        return true;
-    }
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+
+
+	public String getContent() {
+		return content;
+	}
+
+
+
+	public void setContent(String content) {
+		this.content = content;
+	}
+
+
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(content, id);
+	}
+
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Answer other = (Answer) obj;
+		return Objects.equals(content, other.content) && id == other.id;
+	}
+
+
+
+	@Override
+	public String toString() {
+		return "Answer [id=" + id + ", content=" + content + "]";
+	}
+	
+	
+	
+	
+	
 
 }
